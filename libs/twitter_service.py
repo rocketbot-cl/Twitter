@@ -38,31 +38,3 @@ class TwitterService:
     def get_mentions(self, count=10):
         mentions = self.api.mentions_timeline(count=count)
         return mentions
-
-
-if __name__ == '__main__':
-    API_KEY = "d2VR8dNs0RI99KHL4yLnWFRkI"
-    API_KEY_SECRET = "p2QFEKJObzSToZH9HRHsTBU6UNjgqZ35bD2VMl6r8r50uP3gOP"
-    access_token = "90757624-qv7K2uCzZsuBMFALoH7UOCV3mvdO2vkBobSYHFP4d"
-    access_token_secret = "5L5QpndTb5wA9aGYB5lUuGAwm7vVsnAbJNkoGLSkDngv9"
-    twitter_service = TwitterService(API_KEY, API_KEY_SECRET, access_token, access_token_secret)
-    twitter_service.auth_login()
-    params = {}
-    q = "argentina"
-    count = 3
-    lang = "es"
-    result_type = "mixed"
-    if count:
-        params["count"] = count
-    if lang:
-        params["lang"] = lang
-    if result_type:
-        params["result_type"] = result_type
-    
-    result_search = twitter_service.get_tweets(q, **params)
-    #result_search = twitter_service.get_tweets(q="argentina")
-    print(result_search)
-    print(type(result_search))
-    #for tweet in result_search:
-    #    print(tweet.text)
-    #twitter_service.update_status("Test!")
