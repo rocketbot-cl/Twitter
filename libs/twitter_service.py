@@ -21,12 +21,6 @@ class TwitterService:
         return status_tweet
 
     def get_tweets(self, q, count=10, lang="es", result_type=""):
-        print("q:", q)
-        print("count:", count)
-        print("lang:", lang)
-        print("result_type:", result_type)
-        print("Inicio")
-        import json
         result_search = tweepy.Cursor(self.api.search_tweets,
                             q=q,
                             lang=lang,
