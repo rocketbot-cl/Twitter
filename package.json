@@ -1,0 +1,379 @@
+{
+  "author": "Nicolas Liendro",
+  "description": "Connect to Twitter, list tweets from timeline, update status, and search words",
+  "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
+  "version": "1.0",
+  "license": "MIT",
+  "homepage": "http://rocketbot.co/",
+  "linux": true,
+  "windows": true,
+  "mac": true,
+  "docker": false,
+  "name": "Twitter",
+  "type": "module",
+  "dependencies": {
+    "tweepy": "4.4.0"
+  },
+  "title": {
+    "en": "Twitter",
+    "es": "Twitter"
+  },
+  "icon": " data:image/png;base64,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",
+  "children": [
+    {
+    "en": {
+      "title": "Connect to Twitter",
+      "description": "Connect to your Twitter account using your credentials",
+      "title_options": "Select Option",
+      "options": null
+    },
+    "es": {
+      "title": "Conectar con Twitter",
+      "description": "Conectar con tu cuenta de Twitter utilizando tus credenciales",
+      "title_options": "Seleccione una opción",
+      "options": null
+    },
+    "form": {
+      "css": "modal-lg",
+      "inputs": [
+        {
+          "type": "input",
+          "placeholder": "eYSmJLqazCAXxFOrMogNa1322",
+          "title": {
+            "es": "API KEY:",
+            "en": "API KEY:"
+          },
+          "description":{
+            "es": "Colocar el API KEY que generamos en nuestra cuenta",
+            "en": "Enter the API KEY that we generated in our account"
+          },
+          "id": "api_key",
+          "css": "col-md-12"
+        },
+        {
+          "type": "input",
+          "placeholder": "Qvi0tuylMfrzJOJxO5Rp2Y5cSGWMHevITBwG0Oj2199Vo5Tdbr",
+          "title": {
+            "es": "API KEY Secret:",
+            "en": "API KEY Secret:"
+          },
+          "description":{
+            "es": "Colocar el API KEY Secret que generamos en nuestra cuenta",
+            "en": "Enter the API KEY Secret that we generated in our account"
+          },
+          "id": "api_key_secret",
+          "css": "col-md-12"
+        },
+        {
+          "type": "input",
+          "placeholder": "Jc7bsx5UaQFewwvKHava6PBGkaZqdn0HSvp7Jg30dBQyy5ZZOB",
+          "title": {
+            "es": "Access Token:",
+            "en": "Access Token:"
+          },
+          "description":{
+            "es": "Colocar el Access Token que generamos en nuestra cuenta",
+            "en": "Enter the Access Token that we generated in our account"
+          },
+          "id": "access_token",
+          "css": "col-md-12"
+        },
+        {
+          "type": "input",
+          "placeholder": "Qvi0tuylMfrzJOJxO5Rp2Y5cSGWMHevITBwG0Oj2199Vo5Tdbr",
+          "title": {
+            "es": "Access Token Secret:",
+            "en": "Access Token Secret:"
+          },
+          "description":{
+            "es": "Colocar el Access Token Secret que generamos en nuestra cuenta",
+            "en": "Enter the Access Token Secret that we generated in our account"
+          },
+          "id": "access_token_secret",
+          "css": "col-md-12"
+        },
+        {
+          "type": "input",
+          "placeholder": "result",
+          "title": {
+            "es": "Resultado",
+            "en": "Result"
+          },
+          "description": {
+            "es": "Variable donde guardaremos nuestro resultado. Si la conexion es exitosa retornara True, caso contraria sera False",
+            "en": "Variable where we will store our result. If the connection is successful, it will return True, otherwise it will return False"
+            
+          },
+          "remove_vars": true,
+          "id": "res",
+          "css": "col-md-12"
+        }
+      ]
+    },
+    "video_youtube": "",
+    "icon": " data:image/png;base64,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",
+    "module": "connect",
+    "module_name": "Twitter",
+    "visible": true,
+    "options": false,
+    "father": "module",
+    "group": "scripts",
+    "linux": true,
+    "windows": true,
+    "mac": true,
+    "docker": false
+  },
+  {
+    "en": {
+      "title": "Send tweet",
+      "description": "Send a tweet using a message and optional an ID from a tweet to reply",
+      "title_options": "Select Option",
+      "options": null
+    },
+    "es": {
+      "title": "Enviar Tweet",
+      "description": "Enviar un tweet usando un mensaje y opcionalmente un ID de un tweet para responder",
+      "title_options": "Seleccionar Opción",
+      "options": null
+    },
+    "form": {
+      "css": "modal-lg",
+      "inputs": [
+        {
+          "type": "textarea",
+          "placeholder": "Hola amigo! Tanto tiempo",
+          "title": {
+            "es": "Mensaje:",
+            "en": "Message:"
+          },
+          "description":{
+            "es": "En este campo debemos colocar el mensaje a enviar",
+            "en": "In this field we must put the message to send"
+          },
+          "id": "message",
+          "css": "col-md-12"
+        },
+        {
+          "type": "input",
+          "placeholder": "1461077245825531907",
+          "title": {
+            "es": "Tweet ID:",
+            "en": "Tweet ID:"
+          },
+          "description":{
+            "es": "En caso de querer responder un tweet o un hilo, debemos colocar el ID de ese tweet",
+            "en": "In case we want to reply to a tweet or a thread, we must put the ID of that tweet"
+          },
+          "help":{
+              "es": "En caso de querer responder un tweet o un hilo, debemos colocar el ID de ese tweet",
+              "en": "In case we want to reply to a tweet or a thread, we must put the ID of that tweet"
+          },
+          "id": "id_tweet",
+          "css": "col-md-12"
+        },
+        {
+          "type": "input",
+          "placeholder": "result",
+          "title": {
+            "es": "Resultado",
+            "en": "Result"
+          },
+          "description": {
+            "es": "Variable donde guardaremos nuestro resultado. Retorna el link del tweet enviado",
+            "en": "Variable where we will save our result. Returns the link of the tweet sent"
+            
+          },
+          "remove_vars": true,
+          "id": "res",
+          "css": "col-md-12"
+        }
+      ]
+    },
+    "video_youtube": "",
+    "icon": " data:image/png;base64,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",
+    "module": "send_tweet",
+    "module_name": "Twitter",
+    "visible": true,
+    "options": false,
+    "father": "module",
+    "group": "scripts",
+    "linux": true,
+    "windows": true,
+    "mac": true,
+    "docker": false
+  },
+  {
+    "en": {
+      "title": "Search tweets",
+      "description":"Given a word or text, with or without filters, search for it using the Twitter API",
+      "title_options": "Select Option",
+      "options": null
+    },
+    "es": {
+      "title": "Buscar tweet",
+      "description": "Dada una palabra o texto, con o sin filtros, buscarlo mediante la API de Twitter",
+      "title_options": "Seleccionar Opción",
+      "options": null
+    },
+    "form": {
+      "css": "modal-lg",
+      "inputs": [
+        {
+          "type": "input",
+          "placeholder": "Noticias importantes",
+          "title": {
+            "es": "Buscar:",
+            "en": "Search:"
+          },
+          "description":{
+            "es": "Se debe colocar el texto o palabra a buscar",
+            "en": "Must be the text or word to search"
+          },
+          "id": "q",
+          "css": "col-md-12"
+        },
+        {
+          "type": "input",
+          "placeholder": "10",
+          "title": {
+            "es": "Cantidad:",
+            "en": "Count:"
+          },
+          "description":{
+            "es": "Indicamos la cantidad de tweets a devolver. Por defecto devuelve 10",
+            "en": "Indicate the amount of tweets to return. By default returns 10"
+          },
+          "help":{
+            "es": "Indicamos la cantidad de tweets a devolver. Por defecto devuelve 10",
+            "en": "Indicate the amount of tweets to return. By default returns 10"
+          },
+          "id": "count",
+          "css": "col-md-12"
+        },
+        {
+          "type": "input",
+          "placeholder": "es",
+          "title": {
+            "es": "Idioma:",
+            "en": "Lang:"
+          },
+          "description":{
+            "es": "Indicamos el idioma en el que se desea realizar la busqueda",
+            "en": "Indicate the language in which you want to perform the search"
+          },
+          "id": "lang",
+          "css": "col-md-12"
+        },
+        {
+          "type": "input",
+          "placeholder": "recent",
+          "title": {
+            "es": "Tipo de resultado:",
+            "en": "Result type:"
+          },
+          "description":{
+            "es": "Puede ser recent, mixed o popular. Dejar vacio para traer por defecto",
+            "en": "Can be recent, mixed or popular. Leave empty to get by default"
+          },
+          "id": "result_type",
+          "css": "col-md-12"
+        },
+        {
+          "type": "input",
+          "placeholder": "result",
+          "title": {
+            "es": "Resultado",
+            "en": "Result"
+          },
+          "description": {
+            "es": "Variable donde guardaremos nuestro resultado. Retorna una lista de diccionario que tiene link, autor y mensaje del tweet",
+            "en": "Variable where we will store our result. Returns a list of dictionaries that have link, author and message of the tweet"
+            
+          },
+          "remove_vars": true,
+          "id": "res",
+          "css": "col-md-12"
+        }
+      ]
+    },
+    "video_youtube": "",
+    "icon": " data:image/png;base64,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",
+    "module": "get_tweets",
+    "module_name": "Twitter",
+    "visible": true,
+    "options": false,
+    "father": "module",
+    "group": "scripts",
+    "linux": true,
+    "windows": true,
+    "mac": true,
+    "docker": false
+  },
+  {
+    "es": {
+      "title": "Obtener menciones",
+      "description": "Se obtiene una lista de menciones que se hayan hecho a la cuenta",
+      "title_options": "Seleccionar Opción",
+      "options": null
+    },
+    "en": {
+      "title": "Get mentions",
+      "description": "Get a list of mentions that have been made to the account",
+      "title_options": "Select Option",
+      "options": null
+    },
+    
+    "form": {
+      "css": "modal-lg",
+      "inputs": [
+        {
+          "type": "input",
+          "placeholder": "10",
+          "title": {
+            "es": "Cantidad:",
+            "en": "Count:"
+          },
+          "description":{
+            "es": "Indicamos la cantidad de tweets a devolver. Por defecto devuelve 10",
+            "en": "Indicate the amount of tweets to return. By default returns 10"
+          },
+          "help":{
+            "es": "Indicamos la cantidad de tweets a devolver. Por defecto devuelve 10",
+            "en": "Indicate the amount of tweets to return. By default returns 10"
+          },
+          "id": "count",
+          "css": "col-md-12"
+        },
+        {
+          "type": "input",
+          "placeholder": "result",
+          "title": {
+            "es": "Resultado",
+            "en": "Result"
+          },
+          "description": {
+            "es": "Variable donde guardaremos nuestro resultado. Retorna una lista de diccionario que tiene link, autor y mensaje del tweet",
+            "en": "Variable where we will store our result. Returns a list of dictionaries that have link, author and message of the tweet"
+            
+          },
+          "remove_vars": true,
+          "id": "res",
+          "css": "col-md-12"
+        }
+      ]
+    },
+    "video_youtube": "",
+    "icon": " data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAB2AAAAdgB+lymcgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAj+SURBVHic3Zt7cFTVGcB/59y7m91sgklIQmtblIpBQOtrwLZKAIu2I9NabA2PDoqg0BlbsS2OtZ3OOM60M/XBoE7/sIwUFANkWqijdUZRbIko9VFADSXUB2JaJUKSzbrJPu69X/8Ikbz2de/dtfY3k5nNuff77vd997y+c85VFJvtsXrDolFET1fIOQINCqqBKqDi5F0fAz0C3QraRalDSpw2O0Ar11R2FtM8VQylga3xGaJksQNXKJju4Tki0KaFZ5SoLenFkVf9tBP8DMDmE+N0oGylhuUCU33TOwQFBx34gxPqf4ir62I+6fRIS7TGdPRqUerHDFTtUtCtkAcsy76fH1R1e1HkPgAiytgWX4riXqDOixEe6BLFXc7ByIPcqRw3CtwFoCU62UBvQtTXXcn7jtpjS/p6FlW9XbBkoQJGS98CxNnAQC/+v0QMkZX2osqthQjlH4A7RZtT4/cJ3FqwaSVECWutQ5Hb8m0S+QWgRYKGxDcCiz3YVjqEZjsaWcYqlc51a+4ADDi/A7jKD9tKyF/snsiCXEHQWVWIKEPi6/nsOQ8w36iKb+JOyepj1otmS3wtcJ2vZpWWxebU+G+z3ZCxCRhbY9eiVIv/Nn0qLLEXVmwZ68LYAdjac5ahzNeA04ppVQmJ2qZ5Ed8LvTPywugmIKIMbTzC/4/zAKcZtrURkVEvfFSBsTV+I0rWl8au0XwhrFg00WRWncHp4QHz3u8TWj+y2XLU4lhCMsqGDei3s6pfZi+s2DS0YHgAWqI1hhjtQG0uQ08LKKLpzMYUStiAu84LcvPkAMEMXXO/DWvb0/z6YIrUkGnOjBrNL6YFefBfaXYdyxqBTjuYnsKC6p7BgmGPMkXfSh7Ozxyv2TU3xLiAP9n0+KBi19wwP2nI7DwMBOmX0wI81Rji8gkGv/lKkH1XhnlpXpiaIDyf3XmAep0O3jK04JQHm0+MMwJlR8gjpf39jDKWTzL5a6fN1S8kiFu5JDJjKHhmdojZ9YZrHV0p4bLnEhyO5TX77bJD/WcOrid8Em8dKFtJnvn8rLoBsTn1Bjtnh6ktc18TVp0V8OT8sYRw1e4EPSnh5skBLq3NqatGJ8M3Df4ztMJdn+9Dvxg+JTZzvKb1GyHOr8o+qRwLQ8Ft5wQKlhvEEWiLOmy6pIyO75RzyXjNnuM5mwFaWPHJbxhYw1Nwbr4PNka88LMrNC/OC3NrQwBdQGWYOV7zpXL3tUcruHyCwZRKzd4TNqteTeYlJzAtsCV+IZwMgCgpKMs7Eh/d1so03HtBkFeuCNNYl1+VvrjafdUfyo4Oi2/+LZFrCByGaFkCJwPgCFcW8sDdH2XubM6vGhghds4JMf90I2uNqAl6H0W2d1gsfClZkPMADswD0GyP1SvFtEKEHz2Su9ufW2/w+GUh3ppfzn0XBJlVZxAa8cJ7Ut7nEe0xwXGhRsH5NPfWmoZFIwUuje05bvPEf2y+fXruKjyxXLG6IcDqhgBpB96IOrRFHTr6hYke2v8gSdt1EJWhVaOphHPdqLjplSQvzQszKZK/EwENF1VrLqoufMTIRG/ONZ/MiNLTtaCmFCIUNmDnnBCX1xss+3uS13tcrUb7Rke/+2akkCkmcHYhQv02XFitaf5aGQCWf+mAK9762NMLaNBI7rn/SPYMGQXMouwu5ke/DYd6PQWgVqOoLFRq83seJv8+8mqXPSwrdEGl5tQWdd5s77A48Cm3fYBnc2d/uah01R3bAkv3Jn1dD3DDjg7PAUAzcDihYA72OszfnaAz+ekEYV+3w0Fv7R8gphFc77PvPeFw8dP9PHLEKvlo8Lu3PEwAThHTKI67lTYUNNYbPPaexc/2pXgnXpoodPQLW4/60hEfN4HDwMVupG2BGyaZzJvgT1aXL3e9mSLhvfkDtGtBtXvRcMfrKdxPxwtnf7fDI3kkY/kgqHatcN70omRft8PtB1K+GJSLtAMrXkn61t8opdq0HaAV8KRy3eE0a/anit4R/uqNlJ/zD8e2rFbNNZWdAm1eta07nOarz/bzzIe2t2hmoOV9i/vafen5ARDFAZaMO64BNOz0Q+n+boerdieY9EQfS/cmc21S5M1zx2xWvJz0NbDa4Vk4uSSmHNXso25iFsyuN5jrw+iw65jNghcKW+/LB6VphiErQXrbx28UsjI8FhNCilVnBfjhZJN6D3sFgzz8jsWP/pEk7XPaoeCgtbBiOoA5pHwTcE8hisoNmFypmVM38Lav/JxBmQ+LPb1pYc3+FBveLU7W6SgeHvx96jU9/lGlkQi/R5bdoYnlitunBvnW5w1qg4qImelO9/z53zY/3ZfkaF/RhpSxt8a4ui6mRB7MJnm0T7j5tSTX7U3ycpd/vb0j8PSHNpc+18/39ySK6TyCWjf0nPHwhvpYT7Vhmu3kefT1zIhi6Rkmi88waSgwsxbgQLfDkx/YbHw3zZHS5BHHbJWaQlNNdLBg9AGJbfHlIA+PLM/FhJBiRo1m5niDM8sVNcGBv3IT+iyIWcIHCaG91+FQTHjxuJ31sENRUFxnN1U8OrxoJCLKaOlrBbm0ZIaVht12U2QOSg2L+uh6q5TYkr4eiI669tmlxzbNG0Y6D5nOCS6qehslNxbdrFIhsmKsE2KQ5aCk3VT5RyWsLZ5VpUHB3faiyu2Zrmftuq2FkTUIG323qlQIzdY/I3dkuyX72KWU2NHISuApP+0qCYon7WhkWa5j8/lN2J8X0+iMPwQs98O2ErDZ7oks9+e4/CAiymyJ3y2wxpNpxUUU3GM1RX4+Vo8/FoV/MrMt/l2QDZTuC7F86QW5yV5YWdABb3c5658SXx44e8ssV/L+s9tWxjKawu8WKujHZ3P3APWu9XijC6XusK8tX59vlR+J91WLHd1VOh28RYmsBmo868uPE4K631HJB4YmNm7wb3e/pbNCU74Sh+VKMd03vUMQeBPY4Ki+9TTVu9rTHElxPp7eEr9QtCw5+fH0eeSab2TGEXhdCzuVpjndVLHfTzuhSAEYRnNvraFVoyg9TYlMRdOAIzUoNfzzeZEetOpCaBfUIaVUm21ZrSwZ53rvMh/+CysGNSReusE+AAAAAElFTkSuQmCC",
+    "module": "get_mentions",
+    "module_name": "Twitter",
+    "visible": true,
+    "options": false,
+    "father": "module",
+    "group": "scripts",
+    "linux": true,
+    "windows": true,
+    "mac": true,
+    "docker": false
+  }
+  ]
+}
