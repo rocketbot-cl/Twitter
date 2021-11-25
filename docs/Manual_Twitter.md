@@ -6,7 +6,7 @@
   
 Connect to Twitter, list tweets from timeline, update status, and search words  
   
-![banner](/docs/imgs/Banner_Twitter.png)
+![banner](https://i.imgur.com/ExNo4Q7.png)
 ## Como instalar este módulo
   
 __Descarga__ e __instala__ el contenido en la carpeta 'modules' en la ruta de rocketbot.  
