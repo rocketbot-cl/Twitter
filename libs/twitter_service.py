@@ -12,9 +12,15 @@ class TwitterService:
 
     def auth_login(self):
         self.auth = tweepy.OAuthHandler(self.API_KEY, self.API_KEY_SECRET)
-        self.auth.set_access_token(self.ACCESS_TOKEN, self.ACCESS_TOKEN_SECRET)
-        self.api = tweepy.API(self.auth, wait_on_rate_limit=True)
-        return self.api
+        try:
+            url = self.auth.get_authorization_url()
+            self.auth.set_access_token(self.ACCESS_TOKEN, self.ACCESS_TOKEN_SECRET)
+            self.api = tweepy.API(self.auth, wait_on_rate_limit=True)
+            return self.api
+        except Exception as e:
+            print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
+            print(e)
+            return None
 
     def update_status(self, message, in_reply_to_status_id=None):
         status_tweet = self.api.update_status(message, in_reply_to_status_id=in_reply_to_status_id, auto_populate_reply_metadata=True)
