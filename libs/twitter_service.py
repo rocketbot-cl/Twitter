@@ -38,3 +38,23 @@ class TwitterService:
     def get_mentions(self, count=10):
         mentions = self.api.mentions_timeline(count=count)
         return mentions
+
+    def user_timeline(self, user_id, count=10, include_rts=False):
+        user_timeline = self.api.user_timeline(user_id=user_id, count=count, include_rts=include_rts)
+        return user_timeline
+
+    def get_user_id(self, screen_name):
+        user = self.api.get_user(screen_name=screen_name)
+        return user.id
+    
+    def retweet(self, id_tweet):
+        self.api.retweet(id_tweet)
+        return True
+    
+    def tweet_info(self, id_tweet):
+        tweet = self.api.get_status(id=id_tweet)
+        return tweet
+    
+    def get_replies(self, id_tweet):
+        replies = self.api.search_tweets(q=f'to:{id_tweet}')
+        return replies

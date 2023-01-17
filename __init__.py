@@ -130,3 +130,81 @@ if module == "get_mentions":
         print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
         PrintException()
         raise e
+
+if module == "user_timeline":
+    user_id = GetParams("user_id")
+    count = GetParams("count")
+    res = GetParams("res")
+    include_rts = GetParams("include_rts")
+
+    try:
+        if twitter_service is None:
+            raise Exception("No se ha iniciado la conexión con Twitter")
+        if include_rts:
+            user_tl = twitter_service.user_timeline(user_id, count, include_rts)
+        else:
+            user_tl = twitter_service.user_timeline(user_id, count)
+        list_links_tweets = []
+        print(user_tl)
+        for tweet in user_tl:
+            tweet_info = {
+                'id': tweet.id,
+                'link': f'https://twitter.com/twitter/status/{tweet.id}',
+                'text': tweet.text,
+                'author': tweet.author.name,
+            }
+            list_links_tweets.append(tweet_info)
+        SetVar(res, list_links_tweets)
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
+        PrintException()
+        raise e
+    
+if module == "get_user_id":
+    username = GetParams("username")
+    res = GetParams("res")
+    
+    try:
+        if twitter_service is None:
+            raise Exception("No se ha iniciado la conexión con Twitter")
+        user_id = twitter_service.get_user_id(username)
+        print(user_id)
+        SetVar(res, user_id)
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
+        PrintException()
+        raise e
+    
+if module == "retweet":
+    tweet_id = GetParams("tweet_id")
+
+    try:
+        if twitter_service is None:
+            raise Exception("No se ha iniciado la conexión con Twitter")
+        twitter_service.retweet(tweet_id)
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
+        PrintException()
+        raise e
+
+if module == "get_tweet_info":
+    tweet_id = GetParams("tweet_id")
+    res = GetParams("res")
+    
+    try:
+        if twitter_service is None:
+            raise Exception("No se ha iniciado la conexión con Twitter")
+        tweet_info = twitter_service.tweet_info(tweet_id)
+        result = {
+            'id': tweet_info.id,
+            'user': tweet_info.user.screen_name,
+            'text': tweet_info.text,
+            'date': tweet_info.created_at,
+            'retweets': tweet_info.retweet_count,
+            'likes': tweet_info.favorite_count,
+        }
+        SetVar(res, result)
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
+        PrintException()
+        raise e

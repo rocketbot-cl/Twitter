@@ -1,10 +1,10 @@
 {
-  "author": "Nicolas Liendro",
+  "author": "Nicolas Liendro - Nicolas Garcia",
   "description": "Connect to Twitter, list tweets from timeline, update status, and search words",
   "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
-  "version": "1.0",
+  "version": "1.2.0",
   "license": "MIT",
-  "homepage": "http://rocketbot.co/",
+  "homepage": "http://rocketbot.com/",
   "linux": true,
   "windows": true,
   "mac": true,
@@ -365,6 +365,278 @@
     "video_youtube": "",
     "icon": " data:image/png;base64,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",
     "module": "get_mentions",
+    "module_name": "Twitter",
+    "visible": true,
+    "options": false,
+    "father": "module",
+    "group": "scripts",
+    "linux": true,
+    "windows": true,
+    "mac": true,
+    "docker": false
+  },
+  {
+    "es": {
+      "title": "Obtener ID de usuario",
+      "description": "Obtiene el ID de un usuario",
+      "title_options": "Seleccionar Opción",
+      "options": null
+    },
+    "en": {
+      "title": "Get user ID",
+      "description": "Gets the ID of a user",
+      "title_options": "Select Option",
+      "options": null
+    },
+    
+    "form": {
+      "css": "modal-lg",
+      "inputs": [
+        {
+            "type": "input",
+            "placeholder": "rocketbot_es",
+            "title": {
+              "es": "Usuario de Twitter:",
+              "en": "Twitter user:"
+            },
+            "description":{
+              "es": "Indica el usuario de Twitter del cual queremos obtener el ID",
+              "en": "Indicates the Twitter user from which we want to obtain the ID"
+            },
+            "id": "username",
+            "css": "col-md-6"
+        },
+        {
+          "type": "input",
+          "placeholder": "result",
+          "title": {
+            "es": "Resultado",
+            "en": "Result"
+          },
+          "description": {
+            "es": "Variable donde guardaremos nuestro resultado. Retorna una lista de diccionario que tiene link, autor y mensaje del tweet",
+            "en": "Variable where we will store our result. Returns a list of dictionaries that have link, author and message of the tweet"
+          },
+          "help": {
+            "es": "Variable donde se almacenará el resultado sin {}",
+            "en": "Variable where the result will be stored without {}"
+          },
+          "remove_vars": true,
+          "id": "res",
+          "css": "col-md-6"
+        }
+      ]
+    },
+    "video_youtube": "",
+    "icon": " data:image/png;base64,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",
+    "module": "get_user_id",
+    "module_name": "Twitter",
+    "visible": true,
+    "options": false,
+    "father": "module",
+    "group": "scripts",
+    "linux": true,
+    "windows": true,
+    "mac": true,
+    "docker": false
+  },
+  {
+    "es": {
+      "title": "Obtener timeline de usuario",
+      "description": "Se obtiene el timeline de un usuario",
+      "title_options": "Seleccionar Opción",
+      "options": null
+    },
+    "en": {
+      "title": "Get user timeline",
+      "description": "Get the timeline of a user",
+      "title_options": "Select Option",
+      "options": null
+    },
+    
+    "form": {
+      "css": "modal-lg",
+      "inputs": [
+        {
+            "type": "input",
+            "placeholder": "1234567890",
+            "title": {
+              "es": "ID de usuario:",
+              "en": "User ID:"
+            },
+            "description":{
+              "es": "Indicamos el ID del usuario del cual queremos obtener el timeline",
+              "en": "Indicate the ID of the user whose timeline we want to obtain"
+            },
+            "id": "user_id",
+            "css": "col-md-6"
+          },
+        {
+          "type": "input",
+          "placeholder": "10",
+          "title": {
+            "es": "Cantidad:",
+            "en": "Count:"
+          },
+          "description":{
+            "es": "Indicamos la cantidad de tweets a devolver. Por defecto devuelve 10",
+            "en": "Indicate the amount of tweets to return. By default returns 10"
+          },
+          "help":{
+            "es": "Indicamos la cantidad de tweets a devolver. Por defecto devuelve 10",
+            "en": "Indicate the amount of tweets to return. By default returns 10"
+          },
+          "id": "count",
+          "css": "col-md-6"
+        },
+        {
+            "type": "checkbox",
+            "placeholder": "True",
+            "title": {
+              "es": "Incluir retweets:",
+              "en": "Include retweets:"
+            },
+            "description":{
+              "es": "Indicamos si queremos incluir los retweets en el resultado",
+              "en": "Indicate if we want to include retweets in the result"
+            },
+            "id": "include_rts",
+            "css": "col-md-6"
+        },
+        {
+          "type": "input",
+          "placeholder": "result",
+          "title": {
+            "es": "Resultado",
+            "en": "Result"
+          },
+          "description": {
+            "es": "Variable donde guardaremos nuestro resultado. Retorna una lista de diccionario que tiene link, autor y mensaje del tweet",
+            "en": "Variable where we will store our result. Returns a list of dictionaries that have link, author and message of the tweet"
+          },
+          "help": {
+            "es": "Variable donde se almacenará el resultado sin {}",
+            "en": "Variable where the result will be stored without {}"
+          },
+          "remove_vars": true,
+          "id": "res",
+          "css": "col-md-6"
+        }
+      ]
+    },
+    "video_youtube": "",
+    "icon": " data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAB2AAAAdgB+lymcgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAj+SURBVHic3Zt7cFTVGcB/59y7m91sgklIQmtblIpBQOtrwLZKAIu2I9NabA2PDoqg0BlbsS2OtZ3OOM60M/XBoE7/sIwUFANkWqijdUZRbIko9VFADSXUB2JaJUKSzbrJPu69X/8Ikbz2de/dtfY3k5nNuff77vd997y+c85VFJvtsXrDolFET1fIOQINCqqBKqDi5F0fAz0C3QraRalDSpw2O0Ar11R2FtM8VQylga3xGaJksQNXKJju4Tki0KaFZ5SoLenFkVf9tBP8DMDmE+N0oGylhuUCU33TOwQFBx34gxPqf4ir62I+6fRIS7TGdPRqUerHDFTtUtCtkAcsy76fH1R1e1HkPgAiytgWX4riXqDOixEe6BLFXc7ByIPcqRw3CtwFoCU62UBvQtTXXcn7jtpjS/p6FlW9XbBkoQJGS98CxNnAQC/+v0QMkZX2osqthQjlH4A7RZtT4/cJ3FqwaSVECWutQ5Hb8m0S+QWgRYKGxDcCiz3YVjqEZjsaWcYqlc51a+4ADDi/A7jKD9tKyF/snsiCXEHQWVWIKEPi6/nsOQ8w36iKb+JOyepj1otmS3wtcJ2vZpWWxebU+G+z3ZCxCRhbY9eiVIv/Nn0qLLEXVmwZ68LYAdjac5ahzNeA04ppVQmJ2qZ5Ed8LvTPywugmIKIMbTzC/4/zAKcZtrURkVEvfFSBsTV+I0rWl8au0XwhrFg00WRWncHp4QHz3u8TWj+y2XLU4lhCMsqGDei3s6pfZi+s2DS0YHgAWqI1hhjtQG0uQ08LKKLpzMYUStiAu84LcvPkAMEMXXO/DWvb0/z6YIrUkGnOjBrNL6YFefBfaXYdyxqBTjuYnsKC6p7BgmGPMkXfSh7Ozxyv2TU3xLiAP9n0+KBi19wwP2nI7DwMBOmX0wI81Rji8gkGv/lKkH1XhnlpXpiaIDyf3XmAep0O3jK04JQHm0+MMwJlR8gjpf39jDKWTzL5a6fN1S8kiFu5JDJjKHhmdojZ9YZrHV0p4bLnEhyO5TX77bJD/WcOrid8Em8dKFtJnvn8rLoBsTn1Bjtnh6ktc18TVp0V8OT8sYRw1e4EPSnh5skBLq3NqatGJ8M3Df4ztMJdn+9Dvxg+JTZzvKb1GyHOr8o+qRwLQ8Ft5wQKlhvEEWiLOmy6pIyO75RzyXjNnuM5mwFaWPHJbxhYw1Nwbr4PNka88LMrNC/OC3NrQwBdQGWYOV7zpXL3tUcruHyCwZRKzd4TNqteTeYlJzAtsCV+IZwMgCgpKMs7Eh/d1so03HtBkFeuCNNYl1+VvrjafdUfyo4Oi2/+LZFrCByGaFkCJwPgCFcW8sDdH2XubM6vGhghds4JMf90I2uNqAl6H0W2d1gsfClZkPMADswD0GyP1SvFtEKEHz2Su9ufW2/w+GUh3ppfzn0XBJlVZxAa8cJ7Ut7nEe0xwXGhRsH5NPfWmoZFIwUuje05bvPEf2y+fXruKjyxXLG6IcDqhgBpB96IOrRFHTr6hYke2v8gSdt1EJWhVaOphHPdqLjplSQvzQszKZK/EwENF1VrLqoufMTIRG/ONZ/MiNLTtaCmFCIUNmDnnBCX1xss+3uS13tcrUb7Rke/+2akkCkmcHYhQv02XFitaf5aGQCWf+mAK9762NMLaNBI7rn/SPYMGQXMouwu5ke/DYd6PQWgVqOoLFRq83seJv8+8mqXPSwrdEGl5tQWdd5s77A48Cm3fYBnc2d/uah01R3bAkv3Jn1dD3DDjg7PAUAzcDihYA72OszfnaAz+ekEYV+3w0Fv7R8gphFc77PvPeFw8dP9PHLEKvlo8Lu3PEwAThHTKI67lTYUNNYbPPaexc/2pXgnXpoodPQLW4/60hEfN4HDwMVupG2BGyaZzJvgT1aXL3e9mSLhvfkDtGtBtXvRcMfrKdxPxwtnf7fDI3kkY/kgqHatcN70omRft8PtB1K+GJSLtAMrXkn61t8opdq0HaAV8KRy3eE0a/anit4R/uqNlJ/zD8e2rFbNNZWdAm1eta07nOarz/bzzIe2t2hmoOV9i/vafen5ARDFAZaMO64BNOz0Q+n+boerdieY9EQfS/cmc21S5M1zx2xWvJz0NbDa4Vk4uSSmHNXso25iFsyuN5jrw+iw65jNghcKW+/LB6VphiErQXrbx28UsjI8FhNCilVnBfjhZJN6D3sFgzz8jsWP/pEk7XPaoeCgtbBiOoA5pHwTcE8hisoNmFypmVM38Lav/JxBmQ+LPb1pYc3+FBveLU7W6SgeHvx96jU9/lGlkQi/R5bdoYnlitunBvnW5w1qg4qImelO9/z53zY/3ZfkaF/RhpSxt8a4ui6mRB7MJnm0T7j5tSTX7U3ycpd/vb0j8PSHNpc+18/39ySK6TyCWjf0nPHwhvpYT7Vhmu3kefT1zIhi6Rkmi88waSgwsxbgQLfDkx/YbHw3zZHS5BHHbJWaQlNNdLBg9AGJbfHlIA+PLM/FhJBiRo1m5niDM8sVNcGBv3IT+iyIWcIHCaG91+FQTHjxuJ31sENRUFxnN1U8OrxoJCLKaOlrBbm0ZIaVht12U2QOSg2L+uh6q5TYkr4eiI669tmlxzbNG0Y6D5nOCS6qehslNxbdrFIhsmKsE2KQ5aCk3VT5RyWsLZ5VpUHB3faiyu2Zrmftuq2FkTUIG323qlQIzdY/I3dkuyX72KWU2NHISuApP+0qCYon7WhkWa5j8/lN2J8X0+iMPwQs98O2ErDZ7oks9+e4/CAiymyJ3y2wxpNpxUUU3GM1RX4+Vo8/FoV/MrMt/l2QDZTuC7F86QW5yV5YWdABb3c5658SXx44e8ssV/L+s9tWxjKawu8WKujHZ3P3APWu9XijC6XusK8tX59vlR+J91WLHd1VOh28RYmsBmo868uPE4K631HJB4YmNm7wb3e/pbNCU74Sh+VKMd03vUMQeBPY4Ki+9TTVu9rTHElxPp7eEr9QtCw5+fH0eeSab2TGEXhdCzuVpjndVLHfTzuhSAEYRnNvraFVoyg9TYlMRdOAIzUoNfzzeZEetOpCaBfUIaVUm21ZrSwZ53rvMh/+CysGNSReusE+AAAAAElFTkSuQmCC",
+    "module": "user_timeline",
+    "module_name": "Twitter",
+    "visible": true,
+    "options": false,
+    "father": "module",
+    "group": "scripts",
+    "linux": true,
+    "windows": true,
+    "mac": true,
+    "docker": false
+  },
+  {
+    "es": {
+      "title": "Retweetear",
+      "description": "Retweetea un tweet",
+      "title_options": "Seleccionar Opción",
+      "options": null
+    },
+    "en": {
+      "title": "Retweet",
+      "description": "Retweets a tweet",
+      "title_options": "Select Option",
+      "options": null
+    },
+    
+    "form": {
+      "css": "modal-lg",
+      "inputs": [
+        {
+            "type": "input",
+            "placeholder": "1461077245825531907",
+            "title": {
+              "es": "ID del tweet:",
+              "en": "Tweet ID:"
+            },
+            "description":{
+              "es": "Indica el ID del tweet que quieres retweetear",
+              "en": "Indicate the ID of the tweet you want to retweet"
+            },
+            "id": "tweet_id",
+            "css": "col-md-6"
+        }
+      ]
+    },
+    "video_youtube": "",
+    "icon": " data:image/png;base64,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",
+    "module": "retweet",
+    "module_name": "Twitter",
+    "visible": true,
+    "options": false,
+    "father": "module",
+    "group": "scripts",
+    "linux": true,
+    "windows": true,
+    "mac": true,
+    "docker": false
+  },
+  {
+    "es": {
+      "title": "Obtener información de un tweet",
+      "description": "Obtiene información de un tweet a partir de su ID",
+      "title_options": "Seleccionar Opción",
+      "options": null
+    },
+    "en": {
+      "title": "Get tweet information",
+      "description": "Get information from a tweet from its ID",
+      "title_options": "Select Option",
+      "options": null
+    },
+    
+    "form": {
+      "css": "modal-lg",
+      "inputs": [
+        {
+            "type": "input",
+            "placeholder": "1461077245825531907",
+            "title": {
+              "es": "ID del tweet:",
+              "en": "Tweet ID:"
+            },
+            "description":{
+              "es": "Indica el ID del tweet que quieres retweetear",
+              "en": "Indicate the ID of the tweet you want to retweet"
+            },
+            "id": "tweet_id",
+            "css": "col-md-6"
+        },
+        {
+            "type": "input",
+            "placeholder": "result",
+            "title": {
+              "es": "Variable: ",
+              "en": "Variable: "
+            },
+            "description":{
+              "es": "Variable donde se almacenará el resultado",
+              "en": "Variable where the result will be stored"
+            },
+            "help": {
+              "es": "Variable donde se almacenará el resultado sin {}",
+              "en": "Variable where the result will be stored without {}"
+            },
+            "id": "res",
+            "css": "col-md-6"
+        }
+      ]
+    },
+    "video_youtube": "",
+    "icon": " data:image/png;base64,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",
+    "module": "get_tweet_info",
     "module_name": "Twitter",
     "visible": true,
     "options": false,
