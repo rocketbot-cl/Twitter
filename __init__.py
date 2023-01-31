@@ -24,6 +24,9 @@ Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
 
 """
 
+import re
+from datetime import datetime, timezone
+
 base_path = tmp_global_obj["basepath"]
 cur_path = base_path + "modules" + os.sep + "Twitter" + os.sep + "libs" + os.sep
 if cur_path not in sys.path:
@@ -94,15 +97,14 @@ if module == "get_tweets":
             params["result_type"] = result_type
         result_search = twitter_service.get_tweets(q, **params)
         list_links_tweets = []
-        print(result_search)
-        print(type(result_search))
+
         for tweet in result_search:
             tweet_info = {
                 'link': 'https://twitter.com/twitter/statuses/{id}'.format(id=tweet.id),
                 'text': tweet.text,
                 'author': tweet.author.name,
             }
-            print(tweet_info)
+
             list_links_tweets.append(tweet_info)
         SetVar(res, list_links_tweets)
     except Exception as e:
@@ -145,7 +147,7 @@ if module == "user_timeline":
         else:
             user_tl = twitter_service.user_timeline(user_id, count)
         list_links_tweets = []
-        print(user_tl)
+
         for tweet in user_tl:
             tweet_info = {
                 'id': tweet.id,
@@ -155,6 +157,7 @@ if module == "user_timeline":
             }
             list_links_tweets.append(tweet_info)
         SetVar(res, list_links_tweets)
+
     except Exception as e:
         print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
         PrintException()
@@ -168,7 +171,7 @@ if module == "get_user_id":
         if twitter_service is None:
             raise Exception("No se ha iniciado la conexión con Twitter")
         user_id = twitter_service.get_user_id(username)
-        print(user_id)
+
         SetVar(res, user_id)
     except Exception as e:
         print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
@@ -195,11 +198,14 @@ if module == "get_tweet_info":
         if twitter_service is None:
             raise Exception("No se ha iniciado la conexión con Twitter")
         tweet_info = twitter_service.tweet_info(tweet_id)
+        
+        date = tweet_info.created_at.strftime("%d/%m/%Y %H:%M:%S%Z")
+
         result = {
             'id': tweet_info.id,
             'user': tweet_info.user.screen_name,
-            'text': tweet_info.text,
-            'date': tweet_info.created_at,
+            'text': tweet_info.full_text,
+            'date': date,
             'retweets': tweet_info.retweet_count,
             'likes': tweet_info.favorite_count,
         }

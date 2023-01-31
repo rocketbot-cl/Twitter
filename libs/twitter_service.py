@@ -26,20 +26,27 @@ class TwitterService:
         status_tweet = self.api.update_status(message, in_reply_to_status_id=in_reply_to_status_id, auto_populate_reply_metadata=True)
         return status_tweet
 
-    def get_tweets(self, q, count=10, lang="es", result_type=""):
+    def get_tweets(self, q, count, lang="es", result_type=""):
+        if not count: # For some reason the default value is not working correctly. So I set it here
+            count = 10
         result_search = tweepy.Cursor(self.api.search_tweets,
                             q=q,
                             lang=lang,
                             result_type=result_type,
-                            count=count
+                            count=count,
+                            full_text=True
         ).items(count)
         return result_search
 
-    def get_mentions(self, count=10):
+    def get_mentions(self, count):
+        if not count: # For some reason the default value is not working correctly. So I set it here
+            count = 10
         mentions = self.api.mentions_timeline(count=count)
         return mentions
 
-    def user_timeline(self, user_id, count=10, include_rts=False):
+    def user_timeline(self, user_id, count, include_rts=False):
+        if not count: # For some reason the default value is not working correctly. So I set it here
+            count = 10
         user_timeline = self.api.user_timeline(user_id=user_id, count=count, include_rts=include_rts)
         return user_timeline
 
