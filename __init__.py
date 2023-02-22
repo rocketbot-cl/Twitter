@@ -24,8 +24,7 @@ Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
 
 """
 
-import re
-from datetime import datetime, timezone
+import traceback
 
 base_path = tmp_global_obj["basepath"]
 cur_path = base_path + "modules" + os.sep + "Twitter" + os.sep + "libs" + os.sep
@@ -91,6 +90,8 @@ if module == "get_tweets":
         params = {}
         if count:
             params["count"] = int(count)
+        else:
+            params["count"] = 10
         if lang:
             params["lang"] = lang
         if result_type:
@@ -198,9 +199,7 @@ if module == "get_tweet_info":
         if twitter_service is None:
             raise Exception("No se ha iniciado la conexión con Twitter")
         tweet_info = twitter_service.tweet_info(tweet_id)
-        
         date = tweet_info.created_at.strftime("%d/%m/%Y %H:%M:%S%Z")
-
         result = {
             'id': tweet_info.id,
             'user': tweet_info.user.screen_name,
@@ -212,5 +211,6 @@ if module == "get_tweet_info":
         SetVar(res, result)
     except Exception as e:
         print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
+        traceback.print_exc()
         PrintException()
         raise e

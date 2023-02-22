@@ -59,7 +59,7 @@ class TwitterService:
         return True
     
     def tweet_info(self, id_tweet):
-        tweet = self.api.get_status(id=id_tweet)
+        tweet = self.api.get_status(id=id_tweet, tweet_mode="extended")
         return tweet
     
     def get_replies(self, id_tweet):
