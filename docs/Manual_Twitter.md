@@ -43,7 +43,7 @@ Connect to your Twitter account using your credentials
 Send a tweet using a message and optional an ID from a tweet to reply
 |Parameters|Description|example|
 | --- | --- | --- |
-|Message|In this field we must put the message to send|Hola amigo! Tanto tiempo|
+|Message|In this field we must put the message to send|Hello World! I'm sending a tweet from Rocketbot|
 |Tweet ID|In case we want to reply to a tweet or a thread, we must put the ID of that tweet|1461077245825531907|
 |Result|Variable where we will save our result. Returns the link of the tweet sent|result|
 

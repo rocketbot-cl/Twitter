@@ -40,7 +40,7 @@ Conectar con tu cuenta de Twitter utilizando tus credenciales
 Enviar un tweet usando un mensaje y opcionalmente un ID de un tweet para responder
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
-|Mensaje|En este campo debemos colocar el mensaje a enviar|Hola amigo! Tanto tiempo|
+|Mensaje|En este campo debemos colocar el mensaje a enviar|Hola Mundo! Estoy enviando un tweet desde Rocketbot|
 |Tweet ID|En caso de querer responder un tweet o un hilo, debemos colocar el ID de ese tweet|1461077245825531907|
 |Resultado|Variable donde guardaremos nuestro resultado. Retorna el link del tweet enviado|result|
 
